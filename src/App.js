@@ -14,18 +14,17 @@ import './App.css'
 const App = () => {
   const [reptiles, setReptiles] = useState(mockReptiles)
 
-  console.log(reptiles)
   return(
     <>
     <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/reptileindex" element={<ReptileIndex />} />
-      <Route path="/reptileshow" element={<ReptileShow />} />
-      <Route path="/reptilenew" element={<ReptileNew />} />
-      <Route path="/reptileedit" element={<ReptileEdit />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reptileindex" element={<ReptileIndex reptiles={reptiles}/>} />
+        <Route path="/reptileshow/:id" element={<ReptileShow reptiles={reptiles}/>} />
+        <Route path="/reptilenew" element={<ReptileNew />} />
+        <Route path="/reptileedit" element={<ReptileEdit />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     <Footer />
     </>
   )
