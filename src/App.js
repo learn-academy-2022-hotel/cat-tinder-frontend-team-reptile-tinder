@@ -14,6 +14,10 @@ import './App.css'
 const App = () => {
   const [reptiles, setReptiles] = useState(mockReptiles)
 
+  const createReptile = (reptile) => {
+    console.log(reptile);
+  }
+
   return(
     <>
     <Header />
@@ -21,7 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/reptileindex" element={<ReptileIndex reptiles={reptiles}/>} />
         <Route path="/reptileshow/:id" element={<ReptileShow reptiles={reptiles}/>} />
-        <Route path="/reptilenew" element={<ReptileNew />} />
+        <Route path="/reptilenew" element={<ReptileNew createReptile={createReptile} />} />
         <Route path="/reptileedit" element={<ReptileEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
