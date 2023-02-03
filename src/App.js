@@ -25,6 +25,7 @@ const App = () => {
   return(
     <>
     <Header />
+    <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reptileindex" element={<ReptileIndex reptiles={reptiles}/>} />
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/reptileedit/:id" element={<ReptileEdit reptiles={reptiles} updateReptile={updateReptile} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </div>
     <Footer />
     </>
   )
