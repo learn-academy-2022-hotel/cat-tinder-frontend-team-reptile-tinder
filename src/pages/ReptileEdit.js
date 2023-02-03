@@ -1,28 +1,30 @@
 import { React, useState } from "react"
 import { Form, FormGroup, Label, Input, Button } from "reactstrap"
 import { useNavigate, useParams } from "react-router-dom"
+import mockReptiles from "../mockReptiles"
 
 const ReptileEdit = ( { reptiles, updateReptile} ) => {
 
   const {id} = useParams()
   let currentReptile = reptiles?.find(reptile => reptile.id === +id)
-  console.log(currentReptile);
-  const navigate = useNavigate()
+ 
   const [editReptile, setEditReptile] = useState({
-    name: currentReptile.name,
-    age: currentReptile.age,
-    enjoys: currentReptile.enjoys,
-    image: currentReptile.image
-  })
-  
+    name: currentReptile?.name,
+    age: currentReptile?.age,
+    enjoys: currentReptile?.enjoys,
+    image: currentReptile?.image
+    })
+
   const handleChange = (e) => {
     setEditReptile({...editReptile, [e.target.name]: e.target.value})
   }
-
+  
+  const navigate = useNavigate()
   const handleSubmit = () => {
     updateReptile(editReptile, currentReptile.id)
     navigate(`/reptileshow/${currentReptile.id}`)
   }
+  
   return(
     <>
       <h2>Edit this profile</h2>
@@ -34,7 +36,7 @@ const ReptileEdit = ( { reptiles, updateReptile} ) => {
           <Input
             id="name"
             name="name"
-            placeholder={currentReptile.name}
+            placeholder={currentReptile?.name}
             type="text" 
             onChange={handleChange} 
             value={editReptile.name}
@@ -47,7 +49,7 @@ const ReptileEdit = ( { reptiles, updateReptile} ) => {
           <Input
             id="age"
             name="age"
-            placeholder={currentReptile.age}
+            placeholder={currentReptile?.age}
             type="text" 
             onChange={handleChange} 
             value={editReptile.age}
@@ -60,7 +62,7 @@ const ReptileEdit = ( { reptiles, updateReptile} ) => {
           <Input
             id="enjoys"
             name="enjoys"
-            placeholder={currentReptile.age}
+            placeholder={currentReptile?.age}
             type="text" 
             onChange={handleChange} 
             value={editReptile.enjoys}
@@ -73,7 +75,7 @@ const ReptileEdit = ( { reptiles, updateReptile} ) => {
           <Input
             id="image"
             name="image"
-            placeholder={currentReptile.image}
+            placeholder={currentReptile?.image}
             type="text" 
             onChange={handleChange} 
             value={editReptile.image}
