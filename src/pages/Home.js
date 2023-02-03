@@ -1,7 +1,7 @@
 const Home = () => {
     return(
       <>
-      <div role="catchphrase">
+      <div className="catchphrase">
         Cold-blooded, but not cold-hearted.
       </div>
       </>
