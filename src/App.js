@@ -17,6 +17,10 @@ const App = () => {
   const createReptile = (reptile) => {
     console.log(reptile);
   }
+  
+  const updateReptile = (reptile, id) => {
+    console.log("reptile:", reptile);
+  }
 
   return(
     <>
@@ -26,7 +30,7 @@ const App = () => {
         <Route path="/reptileindex" element={<ReptileIndex reptiles={reptiles}/>} />
         <Route path="/reptileshow/:id" element={<ReptileShow reptiles={reptiles}/>} />
         <Route path="/reptilenew" element={<ReptileNew createReptile={createReptile} />} />
-        <Route path="/reptileedit" element={<ReptileEdit />} />
+        <Route path="/reptileedit/:id" element={<ReptileEdit reptiles={reptiles} updateReptile={updateReptile} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />

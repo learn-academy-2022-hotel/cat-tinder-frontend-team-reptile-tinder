@@ -16,10 +16,4 @@ describe("<ReptileNew /", () => {
         expect(element).toBeInTheDocument()
     })
 
-
-    // it("has a create button", () => {
-    //     const submitButton = screen.getByRole(/enjoy/i)
-    //     expect(submitButton).toBeInTheDocument()
-    // })
-
 })
