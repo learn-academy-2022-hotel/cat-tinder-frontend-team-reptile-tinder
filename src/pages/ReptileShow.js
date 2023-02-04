@@ -1,8 +1,9 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { NavLink } from "react-router-dom"
+import { Button } from "reactstrap"
 
-const ReptileShow = ({reptiles}) => {
+const ReptileShow = ({reptiles, deleteReptile}) => {
   const {id} = useParams()
   let currentReptile = reptiles?.find(reptile => reptile.id === +id)
 
@@ -20,7 +21,10 @@ const ReptileShow = ({reptiles}) => {
         </>
       )}
       <NavLink to={`/reptileedit/${currentReptile.id}`} className="nav-link">
-        Edit Reptile Profile
+        <Button>Edit Reptile Profile</Button>
+      </NavLink>
+      <NavLink to="/reptileindex">
+        <Button onClick={() => { deleteReptile(id)}}>Delete Reptile Profile</Button>
       </NavLink>
     </main>
   )
