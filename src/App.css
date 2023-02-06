@@ -10,13 +10,6 @@ body {
   min-height: calc(100vh - 33px);
 }
 
-/* .header {
-  background-color: #C1DA93;
-  border-bottom: 3px solid rgb(75, 88, 66);
-  text-align: center;
-  font-size: 30px;
-} */
-
 .footer {
   background-color: #1a8753;
   border-top: 3px solid #103d26;
