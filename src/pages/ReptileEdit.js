@@ -82,7 +82,7 @@ const ReptileEdit = ( { reptiles, updateReptile} ) => {
           />
         </FormGroup>
       </Form>
-      <Button onClick={handleSubmit} name="submit" role="button">Edit Reptile</Button>
+      <Button outline color="success" onClick={handleSubmit} name="submit" role="button">Edit Reptile</Button>
     </>
   )
 }

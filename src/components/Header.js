@@ -13,7 +13,7 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-import Logo from '../assets/hotel.jpg'
+import Logo from '../assets/lizard.png'
 
 function Header() {
 
@@ -27,8 +27,8 @@ function Header() {
             alt="gecko"
             src={Logo}
             style={{
-              height: 40,
-              width: 80
+              height: 60,
+              width: 60
             }}
           />
           <NavbarText className='nav-text'>
