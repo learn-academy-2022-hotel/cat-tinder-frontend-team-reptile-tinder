@@ -15,9 +15,10 @@ body {
   border-top: 3px solid #103d26;
   font-size: 20px;
   text-align: center;
-  position: relative;
+  position: fixed;
   left: 0;
   bottom: 0;
+  width: 100vw;
 }
 
 .notfound {
