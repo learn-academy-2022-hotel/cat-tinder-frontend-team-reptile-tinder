@@ -77,7 +77,7 @@ const ReptileNew = ( {createReptile} ) => {
           />
         </FormGroup>
       </Form>
-      <Button onClick={handleSubmit} name="submit" role="button">Create Reptile</Button>
+      <Button outline color="success" onClick={handleSubmit} name="submit" role="button">Create Reptile</Button>
     </>
   )
 }

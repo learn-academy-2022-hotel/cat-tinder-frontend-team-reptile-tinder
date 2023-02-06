@@ -7,19 +7,19 @@ body {
 }
 
 .main {
-  min-height: calc(100vh - 66px);
+  min-height: calc(100vh - 33px);
 }
 
-.header {
+/* .header {
   background-color: #C1DA93;
   border-bottom: 3px solid rgb(75, 88, 66);
   text-align: center;
   font-size: 30px;
-}
+} */
 
 .footer {
-  background-color: #C1DA93;
-  border-top: 3px solid rgb(75, 88, 66);
+  background-color: #1a8753;
+  border-top: 3px solid #103d26;
   font-size: 20px;
   text-align: center;
   position: relative;
@@ -54,11 +54,14 @@ body {
 .reptile-show-image {
   height: 350px;
   width: 550px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 .card-image {
   height: 10rem;
-  
+  border-radius: inherit;
+  object-fit: cover;
 }
 
 .nav-text {
@@ -71,5 +74,23 @@ body {
 }
 
 .carousel {
-  margin: 0 auto;
+  margin: 20px;
+  width: 550px;
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.home-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-flex {
+  margin: 20px;
+  color: #103d26;
 }

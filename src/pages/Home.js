@@ -57,7 +57,7 @@ function Home(args) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img style={{height: "400px", width: "550px", borderRadius: "20px"}} src={item.src} alt={item.altText} />
         <CarouselCaption
           // captionText={item.caption}
           captionHeader={item.caption}
@@ -67,30 +67,37 @@ function Home(args) {
   });
 
   return (
-    <Carousel
-      className='carousel'
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-      {...args}
-    >
-      <CarouselIndicators
-        items={items}
+    <div className="home-flex">
+      <Carousel
+        className='carousel'
         activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-      />
-    </Carousel>
+        next={next}
+        previous={previous}
+        {...args}
+      >
+        <CarouselIndicators
+          items={items}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+        />
+      </Carousel>
+
+      <div className="text-flex">
+        <h1>Cold-blooded, but not cold-hearted.</h1>
+        <h3>The #1 site to find lonely reptiles near you. Join today!</h3>
+      </div>
+  </div>
   );
 }
 
